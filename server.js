@@ -9,6 +9,12 @@ app.get('/article-1', function (req, res) {
   res.sendFile("artic 1");
 });
 
+var counter = 0;
+app.get('/counter', function(req, res){
+    res.send(counter.toString());
+});
+
+
 app.get('/article-two', function (req, res) {
   res.send('artic 2');
 });
