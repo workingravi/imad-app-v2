@@ -11,7 +11,7 @@ counter.addEventListener("click", upCount);
 var image = document.getElementById("pic");
 
 //var marginLeft = 0;
-moveRight = function(){
+function moveRight(){
     var marginLeft = image.style.marginLeft;
     console.log('Loaded!');
     image.style.marginLeft += 10 + "px";
