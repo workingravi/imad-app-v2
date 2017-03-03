@@ -8,3 +8,14 @@ var upCount = function(){
 
 counter.addEventListener("click", upCount);
 
+var image = document.getElementById("pic");
+
+moveRight = function(){
+    var marginLeft = image.style.marginLeft;
+    image.style.marginLeft += 10 + "px";
+}
+
+image.onClick = function(){
+  var interval = setInterval(moveRight, 100);  
+};
+
