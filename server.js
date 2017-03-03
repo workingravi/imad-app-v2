@@ -19,9 +19,16 @@ app.get('/counter', function(req, res){
 app.get('/article-two', function (req, res) {
   res.send('artic 2');
 });
-app.get('/article-3', function (req, res) {
-  res.sendFile("artic 3");
+
+var comments = [];
+app.get('/comments/', function (req, res) {
+  var comment = req.query.comment;
+  
+  comments.push(comment);
+  
+  res.send(JSON.stringify(comments));
 });
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
