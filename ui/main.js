@@ -31,7 +31,7 @@ subComment.onclick = function(){
   
   //3. Make request
     var comment = commentObj.value;
-    req.open("GET", "http://workingravi.imad.hasura-app.io/comments?comment="+comment, true);
+    req.open("GET", "http://workingravi.imad.hasura-app.io/comments?comment="+encodeURIComponent(comment), true);
     req.send(null);
 };
 
