@@ -22,7 +22,7 @@ app.get('/article-two', function (req, res) {
 
 var comments = [];
 app.get('/comments/', function (req, res) {
-  var comment = req.query.comment;
+  var comment = decodeURIComponent(req.query.comment);
   
   comments.push(comment);
   
