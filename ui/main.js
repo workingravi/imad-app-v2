@@ -10,14 +10,15 @@ counter.addEventListener("click", upCount);
 
 var image = document.getElementById("pic");
 
-//var marginLeft = 0;
+var marginLeft = 0;
 function moveRight(){
-    var marginLeft = image.style.marginLeft;
+    //marginLeft = image.style.marginLeft;
     console.log(marginLeft);
-    image.style.marginLeft += 10 + "px";
+    image.style.marginLeft = marginLeft + 10 + "px";
 }
 
 image.onClick = function(){
+   console.log(marginLeft); 
   var interval = setInterval(moveRight, 100);  
 };
 
