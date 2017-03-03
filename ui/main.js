@@ -16,8 +16,8 @@ var image = document.getElementById("pic");
 var marginLeft = 0;
 function moveRight(){
     //marginLeft = image.style.marginLeft;
-    console.log(marginLeft);
-    image.style.marginLeft = marginLeft + 10 + "px";
+    marginLeft += 10;
+    image.style.marginLeft = marginLeft + "px";
 }
 
 image.onclick = function(){
