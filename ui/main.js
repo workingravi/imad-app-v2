@@ -21,7 +21,6 @@ function moveRight(){
 }
 
 image.onclick = function(){
-console.log('Loaded 3!');
   var interval = setInterval(moveRight, 100);  
 };
 
