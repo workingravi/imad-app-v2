@@ -8,7 +8,10 @@ var upCount = function(){
 
 counter.addEventListener("click", upCount);
 
+console.log('Loaded!2');
+
 var image = document.getElementById("pic");
+console.log('Loaded 3!');
 
 var marginLeft = 0;
 function moveRight(){
