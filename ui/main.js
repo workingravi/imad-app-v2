@@ -1,26 +1,37 @@
 console.log('Loaded!');
-var counter = document.getElementById("clicker");
-var count = document.getElementById("count");
-
-var upCount = function(){
-    count.textContent = parseInt(count.textContent) + 1;
-};
-
-counter.addEventListener("click", upCount);
-
-console.log('Loaded!2');
-
-var image = document.getElementById("pic");
 
 
-var marginLeft = 0;
-function moveRight(){
-    //marginLeft = image.style.marginLeft;
-    marginLeft += 10;
-    image.style.marginLeft = marginLeft + "px";
-}
+var commentObj = document.getElementById("comment");
+var subComment = document.getElementById("submit_comment");
 
-image.onclick = function(){
-  var interval = setInterval(moveRight, 100);  
+subComment.onclick = function(){
+  
+  //1. Create request
+  var req = new XMLHttpReques();
+  
+  
+  //2. Deal with response
+    req.onreadystatechange = function(){
+        if(req.readyState === XMLHttpRequest.DONE){
+            if(req.status === 200){
+                var comments = JSON.parse(req.responseText);
+                var i, n = 0;
+                
+                var clist='';
+                for(i = 0, n = comments.length; i<n; i++){
+                    clist += "<li>" + comments[i] + "</li>";
+                }
+                
+                var numComments = document.getElementById("num_cs");
+                numComments.textContent = n;
+                cl.innerHTML = clist;
+            }
+        }
+    };
+  
+  //3. Make request
+    var comment = commentObj.value;
+    req.open("GET", "http://workingravi.imad.hasura-app.io/comments?comment="+comment, true);
+    req.send(null);
 };
 
