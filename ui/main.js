@@ -13,7 +13,7 @@ var image = document.getElementById("pic");
 //var marginLeft = 0;
 function moveRight(){
     var marginLeft = image.style.marginLeft;
-    console.log('Loaded!');
+    console.log(marginLeft);
     image.style.marginLeft += 10 + "px";
 }
 
