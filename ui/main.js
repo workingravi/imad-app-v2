@@ -11,7 +11,7 @@ counter.addEventListener("click", upCount);
 console.log('Loaded!2');
 
 var image = document.getElementById("pic");
-console.log('Loaded 3!');
+
 
 var marginLeft = 0;
 function moveRight(){
@@ -21,7 +21,7 @@ function moveRight(){
 }
 
 image.onclick = function(){
-   console.log(marginLeft); 
+console.log('Loaded 3!');
   var interval = setInterval(moveRight, 100);  
 };
 
