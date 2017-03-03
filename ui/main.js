@@ -7,7 +7,7 @@ var subComment = document.getElementById("submit_comment");
 subComment.onclick = function(){
   
   //1. Create request
-  var req = new XMLHttpReques();
+  var req = new XMLHttpRequest();
   
   
   //2. Deal with response
